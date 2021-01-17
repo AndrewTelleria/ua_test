@@ -24,7 +24,7 @@
     <script type="text/javascript">
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('{% static 'ua-test/push-worker.js' %}').then(function(registration) {
+          navigator.serviceWorker.register('{% static 'ua-test/js/push-worker.js' %}').then(function(registration) {
             // Registration was successful
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
           }, function(err) {
