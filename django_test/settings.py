@@ -27,8 +27,11 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['54.185.203.72', 'www.aktelleria.com', 'aktelleria.com']
+ALLOWED_HOSTS = ['www.aktelleria.com', 'aktelleria.com']
 
+CORS_ALLOWED_ORIGINS = [
+    "https://aktelleria.com",
+]
 
 # Application definition
 
@@ -51,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'django_test.urls'
