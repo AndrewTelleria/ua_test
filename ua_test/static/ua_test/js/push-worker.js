@@ -3,7 +3,7 @@ importScripts('https://aswpsdkus.com/notify/v1/ua-sdk.min.js')
 uaSetup.worker(self, {
   defaultIcon: 'https://aktelleria.com',
   defaultTitle: 'Aktelleria',
-  defaultActionURL: 'https://aktelleria.com',
+  defaultActionURL: 'https://aktelleria.com/ua-test',
   appKey: '157YRx2qSLOlFP7JQnoHyQ',
   token: 'MToxNTdZUngycVNMT2xGUDdKUW5vSHlROnNXaXdIV3RfVS1MNGFwTHdraVRJUnB5bmUxb2xWb2JzSTJHd3pJbmpVTm8',
   vapidPublicKey: 'BLViPQNwm8NSezMNhFksQ3aPQfY6jvlqVXsvigC9csEyFLkZgt__2ObajsGaV-q3xFS8LBO2TVdk3H4o4zOwyAU='
