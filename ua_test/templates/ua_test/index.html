@@ -9,19 +9,6 @@
   <h1>Airship Test</h1>
   <p>This is a test, I repeat this is a test.</p>
   <script type="text/javascript">
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-          navigator.serviceWorker.register('{% static 'ua_test/js/push-worker.js' %}').then(function(registration) {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, function(err) {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-          });
-        });
-      }
-  </script>
-  <script type="text/javascript">
     // 86acbd31cd7c09cf30acb66d2fbedc91daa48b86:1610687950.6481936
     !function(n,r,e,t,c){var i,o="Promise"in n,u={then:function(){return u},catch:function(n){
     return n(new Error("Airship SDK Error: Unsupported browser")),u}},s=o?new Promise((function(n,r){i=function(e,t){e?r(e):n(t)}})):u
@@ -32,6 +19,19 @@
         appKey: '157YRx2qSLOlFP7JQnoHyQ',
         token: 'MToxNTdZUngycVNMT2xGUDdKUW5vSHlROnNXaXdIV3RfVS1MNGFwTHdraVRJUnB5bmUxb2xWb2JzSTJHd3pJbmpVTm8'
       });
+    </script>
+    <script type="text/javascript">
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('{% static 'ua_test/js/push-worker.js' %}').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
     </script>
 </body>
 </html>
