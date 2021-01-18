@@ -15,10 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('ua-test/', include('ua_test.urls')),
     path('admin/', admin.site.urls),
+    path('push-worker.js', (TemplateView.as_view(
+        template_name="service-worker.js",
+        content_type='application/javascript',
+    )), name='service-worker.js'),
 ]
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
